@@ -5,11 +5,9 @@ function animatedForm() {
     arrow.addEventListener("click", () => {
       const input = arrow.previousElementSibling;
       const parent = arrow.parentElement;
-      const nextForm = parent.nextElementSibling; // problem is in parentElementSibling wait
-
-      //check for validation
+      const nextForm = parent.nextElementSibling;
       if (input.type === "text" && validateUser(input)) {
-        nextSlide(parent, nextForm); //function call yaha kiya hai
+        nextSlide(parent, nextForm);
       }
     });
   });
@@ -26,7 +24,6 @@ function validateUser(user) {
 }
 
 function nextSlide(parent, nextForm) {
-  // ye function define kiya
   parent.classList.add("innactive");
   parent.classList.remove("active");
   nextForm.classList.add("active");
